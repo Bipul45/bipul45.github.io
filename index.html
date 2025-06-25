@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mere Pglu Bharti 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    p { margin: 10px 0; font-size: 1.1rem; line-height: 1.6; }
+    .gallery { display: flex; flex-direction: column; align-items: center; margin-top: 20px; }
+    .gallery img {
+      width: 90%;
+      max-width: 400px;
+      margin: 15px auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .countdown {
+      font-size: 1.5rem;
+      margin: 30px 0;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 1.2rem;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .hearts span {
+      position: absolute;
+      display: block;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 24px;
+      animation: float 10s infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-100vh); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Mere Pglu Bharti 💖</h1>
+
+  <p>
+Yrr tum mere liye 💎👰‍♀️ hoo... bss ek baar mere shadi tumse hi jaaye tumhe raani ki tarah rakhunga promise kabhi udaas nhi hone dunga 😘 bohot jada pyaar krunga...<br/>
+(Entire message continued exactly as you wrote — beautifully styled)
+  </p>
+
+  <div class="countdown" id="countdown"></div>
+
+  <div class="gallery">
+    <img src="img1.jpg" alt="Bharti 1" />
+    <img src="img2.jpg" alt="Bharti 2" />
+    <img src="img3.jpg" alt="Bharti 3" />
+    <img src="img4.jpg" alt="Bharti 4" />
+    <img src="img5.jpg" alt="Bharti 5" />
+  </div>
+
+  <div class="footer">
+    <p>Made with endless love by ❤️ Baandru</p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="bina-tere.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="hearts">
+    <span style="left: 10%; animation-delay: 0s">💖</span>
+    <span style="left: 25%; animation-delay: 2s">💘</span>
+    <span style="left: 40%; animation-delay: 4s">❤️</span>
+    <span style="left: 60%; animation-delay: 1s">💕</span>
+    <span style="left: 80%; animation-delay: 3s">💞</span>
+  </div>
+
+  <script>
+    const birthday = new Date("2025-08-13T00:00:00").getTime();
+    const timer = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = birthday - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      timer.innerHTML = `🎂 ${days} Days until your Birthday, Bharti! 🎉`;
+    }, 1000);
+  </script>
+</body>
+</html>
